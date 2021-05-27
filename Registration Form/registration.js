@@ -145,16 +145,22 @@ function validation()
      alert("Enter Email Adress");
      return false;
     }
-    if(email.indexOf('@') <= 0)
+    // if(email.indexOf('@') <= 0)
+    // {
+    //  alert("Enter valid Email Adress");
+    //  return false;
+    // }
+    // if((email.charAt(email.length-4)!= '.' && email.charAt(email.length-3)!= '.'))
+    // {
+    //  alert("Enter valid Email Adress");
+    //  return false;
+    // }
+    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email))
     {
-     alert("Enter valid Email Adress");
-     return false;
+        alert("Enter a valid Email");
+        return false;
     }
-    if((email.charAt(email.length-4)!= '.' && email.charAt(email.length-3)!= '.'))
-    {
-     alert("Enter valid Email Adress");
-     return false;
-    }
+
 
    //password and confirm password  Validation
     if (pass == "")
